@@ -1,16 +1,16 @@
 #!/bin/bash
 
-# Activate python virtual environment
+# Python 仮想環境を有効化
 test -d backend/venv || python3 -m venv backend/venv
 source backend/venv/bin/activate
 pip install -r backend/requirements.txt >/dev/null 2>&1
 
-# Install Node packages if node_modules doesn't exist
+# node_modules がない場合は Node パッケージをインストール
 if [ ! -d frontend/node_modules ]; then
   cd frontend && npm install >/dev/null 2>&1 && cd ..
 fi
 
-# Run backend and frontend
+# バックエンドとフロントエンドを起動
 cd backend && uvicorn app.main:app --reload &
 BACK_PID=$!
 cd ../frontend && npm run dev &
