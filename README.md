@@ -1,22 +1,22 @@
-# Gemini Tag Generator
+# Gemini タグ生成器
 
-This project consists of a Next.js frontend and a FastAPI backend to generate image tags using the Gemini API.
+このプロジェクトは、Gemini API を利用して画像タグを生成する Next.js フロントエンドと FastAPI バックエンドから構成されています。
 
-## Structure
+## 構成
 
-- `frontend/` – Next.js application written in TypeScript with TailwindCSS
-- `backend/` – FastAPI server structured with domain, usecases, interfaces and infrastructure modules following Clean Architecture principles
+- `frontend/` – TailwindCSS を用いた TypeScript 製の Next.js アプリケーション
+- `backend/` – Clean Architecture に基づきドメイン、ユースケース、インターフェース、インフラストラクチャに分割された FastAPI サーバ
 
-## Setup
+## セットアップ
 
-1. Copy `.env.example` in each directory to `.env` and adjust values.
-2. Install dependencies for both parts.
-3. TailwindCSS is already configured in the frontend; styles are in `src/styles/globals.css`.
-4. Run `start.sh` to launch backend and frontend together.
+1. 各ディレクトリの `.env.example` を `.env` としてコピーし、値を設定します。
+2. フロントエンドとバックエンドの依存関係をインストールします。
+3. フロントエンドでは TailwindCSS が既に設定されており、スタイルは `src/styles/globals.css` にあります。
+4. `start.sh` を実行するとバックエンドとフロントエンドを同時に起動できます。
 
-## Requirements
+## 必要条件
 
-- Node.js 18+
-- Python 3.10+
+- Node.js 18 以上
+- Python 3.10 以上
 
-The project is lightweight so it should run on machines with 8GB of RAM.
+このプロジェクトは軽量のため、8GB の RAM があれば実行可能です。

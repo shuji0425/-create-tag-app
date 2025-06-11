@@ -2,9 +2,9 @@ from typing import List
 from fastapi import UploadFile
 
 class GeminiService:
-    """Service responsible for communicating with the Gemini API."""
+    """Gemini API と通信する役割を持つサービス。"""
 
     async def generate_tags(self, file: UploadFile) -> List[str]:
-        # Placeholder implementation. In production, send `file` to Gemini API.
+        # 仮実装です。実運用では `file` を Gemini API に送信してください。
         filename = file.filename
         return ["sample", "tags", filename]
