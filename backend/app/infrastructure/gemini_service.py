@@ -4,6 +4,13 @@ import os
 import asyncio
 import google.generativeai as genai
 
+if not hasattr(genai, "GenerativeModel"):
+    raise ImportError(
+        "google-generativeai package is outdated."
+        " Please install version 0.3.0 or newer."
+    )
+
+
 class GeminiService:
     """Gemini API と通信する役割を持つサービス。"""
 
