@@ -24,8 +24,8 @@ class GeminiService:
         data = await file.read()
         model = genai.GenerativeModel("gemini-1.5-flash")
         prompt = (
-            "You are an assistant that describes the content of the image as 10 short tags. "
-            "Return only a comma-separated list of 10 tags."
+            "あなたは画像の内容を10個の短いタグで説明するアシスタントです。"
+            "タグは日本語で、カンマ区切りのリストで10個のみ返してください。"
         )
         response = await asyncio.to_thread(
             model.generate_content,
