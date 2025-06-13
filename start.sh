@@ -3,6 +3,7 @@ set -euo pipefail
 
 # Activate python virtual environment
 echo "Activating Python virtual environment..."
+rm -rf backend/venv
 test -d backend/venv || python3 -m venv backend/venv
 source backend/venv/bin/activate
 
