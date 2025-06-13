@@ -1,5 +1,10 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from dotenv import load_dotenv
+
+# Load environment variables from .env if present before other imports
+load_dotenv()
+
 from .interfaces.router import router
 
 app = FastAPI(title="Gemini Tagging API")

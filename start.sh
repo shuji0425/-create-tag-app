@@ -6,6 +6,13 @@ echo "Activating Python virtual environment..."
 test -d backend/venv || python3 -m venv backend/venv
 source backend/venv/bin/activate
 
+# Load environment variables for the backend if available
+if [ -f backend/.env ]; then
+  set -a
+  source backend/.env
+  set +a
+fi
+
 # Install Python dependencies
 echo "Installing Python dependencies..."
 pip install --upgrade pip
